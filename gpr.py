@@ -115,5 +115,5 @@ def fit_co2_trend_plus_gpr(csv_path: str, train_frac: float = 0.7, random_state:
     plt.show()
 
 # Example:
-fit_co2_trend_plus_gpr("./project_files/co2_data.csv")
+fit_co2_trend_plus_gpr("/co2_data.csv")
 

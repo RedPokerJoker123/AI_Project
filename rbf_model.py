@@ -10,7 +10,7 @@ from sklearn.gaussian_process.kernels import (
 # ==========================
 # EDIT THIS
 # ==========================
-CSV_PATH = "./project_files/co2_data.csv"   # columns: year_week,value
+CSV_PATH = "./co2_data.csv"   # columns: year_week,value
 
 # weekly series -> annual cycle ~ 1 year
 PERIOD_YEARS = 1.0

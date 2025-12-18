@@ -268,7 +268,7 @@ def run_grid_and_report(
     return results_df
 
 results = run_grid_and_report(
-    csv_path="./project_files/co2_data.csv",
+    csv_path="co2_data.csv",
     lookback=26,
     layers_list=(1, 2, 3, 5, 10, 20, 30),
     units_list=(1, 2, 3, 5, 10, 20, 30),
@@ -283,7 +283,7 @@ if len(results) > 0:
     print("\nBest config:", dict(best[["layers","units","test_RMSE","test_R2","test_Adj_R2"]]))
 
     _ = run_rnn_baseline_sklearn(
-        csv_path="./project_files/co2_data.csv",
+        csv_path="/co2_data.csv",
         lookback=int(best["lookback"]),
         hidden_layers=int(best["layers"]),
         neurons_per_layer=int(best["units"]),

@@ -52,9 +52,8 @@ def get_params(model, result=None):
 
 plotter = graphing.Plotter()
 
-if False: # Plots the graphs... important to turn on for final
-    plotter.plot_regression(train_regression_X, train_regression_Y)
-    plotter.plot_classification(train_classification_X, train_classification_Y)
+plotter.plot_regression(train_regression_X, train_regression_Y)
+plotter.plot_classification(train_classification_X, train_classification_Y)
 
 correlation = metrics.FeatureCorrelation(train_regression_X, train_regression_Y)
 print(f"[LOG]: {correlation.result()}")

@@ -134,7 +134,7 @@ def pretty_print(title, rows, metric_key):
         print(f"{i:>2}. {r['run_id']} | {metric_key}={r[metric_key]} | artifact={r['artifact']}")
 
 # ---- run it ----
-leaderboards = build_leaderboards("data/runs.jsonl", k=10)
+leaderboards = build_leaderboards("./data/runs.jsonl", k=10)
 
 pretty_print("TOP 5 REGRESSION (Adjusted R2)", leaderboards["top_regression_overall"], "adjusted_r2")
 pretty_print("TOP 5 CLASSIFICATION (AUC)", leaderboards["top_classification_overall"], "auc")
